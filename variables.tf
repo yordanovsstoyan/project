@@ -103,13 +103,6 @@ variable "database_user" {
   default     = "dbuser"
 }
 
-# RDS instance password
-variable "database_password" {
-  type      = string
-  sensitive = false
-  default   = "password123"
-}
-
 # ID of EC2 instance AMI
 variable "ami" {
   type        = string

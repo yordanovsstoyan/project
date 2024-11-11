@@ -30,8 +30,6 @@ db_engine_version = "8.0.32"
 database_name = "wordpress_DB"
 # RDS instance username
 database_user = "dbuser"
-# RDS instance password
-database_password = "password123"
 # ID of EC2 instance AMI
 ami = "ami-0ea3c35c5c3284d82"
 # Type of EC2 instance
