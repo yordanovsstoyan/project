@@ -87,7 +87,7 @@ jobs:
       - name: Terraform Apply
         id: apply
         run: |
-          terraform apply -no-color -var-file=test-env.tfvars -input=false ${{ github.workspace }}/tfplanoutput/tf.plan
+          terraform apply -no-color -input=false ${{ github.workspace }}/tfplanoutput/tf.plan
 
       - name: Terraform Output
         id: output
