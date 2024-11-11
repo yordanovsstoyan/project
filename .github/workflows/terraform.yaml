@@ -2,8 +2,8 @@ name: Testing Environment
 
 on:
   push:
-    branches:
-      - feat/wordpress
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   plan:
