@@ -38,7 +38,7 @@ locals {
       protocol   = "tcp"
       direction  = "ingress"
     },
-    # Ingress Rules for ALB Public Subnets. We use Only http for simplicity in this project.
+    # Ingress Rules for ALB Public Subnets
     {
       cidr_block = var.public_subnets_cidr[0]
       priority   = 103
@@ -56,8 +56,24 @@ locals {
       direction  = "ingress"
     },
     {
-      cidr_block = "0.0.0.0/0"
+      cidr_block = var.public_subnets_cidr[0]
       priority   = 105
+      from_port  = 443
+      to_port    = 443
+      protocol   = "tcp"
+      direction  = "ingress"
+    },
+    {
+      cidr_block = var.public_subnets_cidr[1]
+      priority   = 106
+      from_port  = 443
+      to_port    = 443
+      protocol   = "tcp"
+      direction  = "ingress"
+    },
+    {
+      cidr_block = "0.0.0.0/0"
+      priority   = 107
       from_port  = 1024
       to_port    = 65535
       protocol   = "tcp"
