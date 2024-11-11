@@ -43,7 +43,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: |
-          terraform plan -no-color -out=${{ github.workspace }}/tfplanoutput/tf.plan
+          terraform plan -no-color -var-file=test-env.tfvars -out=${{ github.workspace }}/tfplanoutput/tf.plan
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
@@ -87,7 +87,7 @@ jobs:
       - name: Terraform Apply
         id: apply
         run: |
-          terraform apply -no-color -input=false ${{ github.workspace }}/tfplanoutput/tf.plan
+          terraform apply -no-color -var-file=test-env.tfvars -input=false ${{ github.workspace }}/tfplanoutput/tf.plan
 
       - name: Terraform Output
         id: output
