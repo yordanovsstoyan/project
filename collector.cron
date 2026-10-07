@@ -1,0 +1,3 @@
+SHELL=/bin/sh
+PATH=/usr/local/bin:/usr/bin:/bin
+* * * * * root python3 /opt/kupibileti-binlog-collector/collector.py --config /etc/kupibileti-binlog-collector/config.json >> /var/log/kupibileti-binlog-collector.log 2>&1
