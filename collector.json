@@ -1,0 +1,9 @@
+{
+  "bucket": "kupibileti-legacy-binlogs-dev",
+  "region": "eu-central-1",
+  "prefix": "binlogs",
+  "source_id": "toree-1",
+  "spool_dir": "/var/lib/kupibileti-binlog-collector",
+  "mysql_binary": "mysql",
+  "mysql_socket": "/run/mysql/mysql.sock"
+}
