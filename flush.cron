@@ -1,0 +1,3 @@
+SHELL=/bin/sh
+PATH=/usr/local/bin:/usr/bin:/bin
+*/5 * * * * root mysql --no-defaults --user=root --protocol=SOCKET --socket=/run/mysql/mysql.sock --connect-timeout=10 --execute="FLUSH BINARY LOGS;" >> /var/log/kupibileti-binlog-collector.log 2>&1
